@@ -8,7 +8,7 @@ export default function CampusSection() {
 
         <div className="text-center mb-8">
           <h2 className="text-4xl font-bold text-blue-900">
-            Campus Life
+            Our Learning Environment
           </h2>
 
           <p className="mt-4 text-gray-600">
@@ -41,7 +41,7 @@ export default function CampusSection() {
 
           <div className="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition duration-300">
             <Image
-              src="/campus-3.jpg"
+              src="/campus-3.Jpg"
               alt="Building"
               width={500}
               height={300}
