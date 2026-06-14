@@ -5,7 +5,7 @@ export default function CTASection() {
 
         <div className="grid md:grid-cols-3 gap-4">
 
-          <div className="bg-blue-900 text-white rounded-lg p-8 text-center">
+          <div className="bg-blue-900 text-white rounded-lg p-8 text-center hover:bg-blue-800 hover:scale-105 transition duration-300 cursor-pointer">
             <h3 className="text-xl font-bold">
               Admission Enquiry
             </h3>
@@ -15,7 +15,7 @@ export default function CTASection() {
             </p>
           </div>
 
-          <div className="bg-blue-900 text-white rounded-lg p-8 text-center">
+          <div className="bg-blue-900 text-white rounded-lg p-8 text-center hover:bg-blue-800 hover:scale-105 transition duration-300 cursor-pointer" >
             <h3 className="text-xl font-bold">
               Enrol Now
             </h3>
@@ -25,7 +25,7 @@ export default function CTASection() {
             </p>
           </div>
 
-          <div className="bg-blue-900 text-white rounded-lg p-8 text-center">
+          <div className="bg-blue-900 text-white rounded-lg p-8 text-center hover:bg-blue-800 hover:scale-105 transition duration-300 cursor-pointer">
             <h3 className="text-xl font-bold">
               Future Doctor
             </h3>

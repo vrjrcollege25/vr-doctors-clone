@@ -1,9 +1,9 @@
 export default function AboutSection() {
   return (
-    <section className="py-20 bg-white">
+    <section id='about' className="scroll-mt-24 py-14 bg-white">
       <div className="max-w-6xl mx-auto px-6">
 
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-4xl font-bold text-blue-900">
             Why VR Doctors?
           </h2>

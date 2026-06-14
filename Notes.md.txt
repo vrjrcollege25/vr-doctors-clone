@@ -1,0 +1,13 @@
+Commands I use often
+
+npm run dev
+
+git add .
+git commit -m "message"
+git push
+
+Project URL:
+https://vr-doctors-clone.vercel.app
+
+GitHub:
+https://github.com/vrjrcollege25/vr-doctors-clone
