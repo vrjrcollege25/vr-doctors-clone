@@ -21,7 +21,7 @@ export default function CampusSection() {
 
           <div className="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition duration-300">
             <Image
-              src="/campus-1.jpg"
+              src="/campus-1 copy.jpg"
               alt="Classroom"
               width={500}
               height={300}
@@ -31,7 +31,7 @@ export default function CampusSection() {
 
           <div className="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition duration-300">
             <Image
-              src="/campus-2.jpg"
+              src="/campus-2 copy.jpg"
               alt="Results"
               width={500}
               height={300}
@@ -41,7 +41,7 @@ export default function CampusSection() {
 
           <div className="overflow-hidden rounded-xl shadow-lg hover:scale-105 transition duration-300">
             <Image
-              src="/campus-3.Jpg"
+              src="/campus-3 copy.jpg"
               alt="Building"
               width={500}
               height={300}
