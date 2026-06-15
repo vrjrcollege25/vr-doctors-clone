@@ -1,24 +1,24 @@
 import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import CTASection from "../components/CTASection";
-import AboutSection from "../components/AboutSection";
-import ResultsSection from "../components/ResultsSection";
+import JourneySection from "../components/JourneySection";
 import DreamersSection from "../components/DreamersSection";
-import CampusSection from "../components/CampusSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
+import HeroCarousel from "../components/HeroCarousel";
+import VisionSection from "../components/VisionSection";
+import CampusLifeSection from "../components/CampusLifeSection";
+import CampusVisitCTA from "../components/CampusVisitCTA";
 
 export default function Home() {
   return (
     <main id="top">
       <Navbar />
-      <Hero />
-      <CTASection />
-      <AboutSection />
-      <ResultsSection />
+      <HeroCarousel />
+      <JourneySection />
+      <VisionSection />
+      <CampusLifeSection />
       <DreamersSection />
-      <CampusSection />
+      <CampusVisitCTA />
       <ContactSection />
       <Footer />
       <WhatsAppButton />

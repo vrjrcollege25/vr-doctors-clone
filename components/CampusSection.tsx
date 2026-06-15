@@ -8,7 +8,7 @@ export default function CampusSection() {
 
         <div className="text-center mb-8">
           <h2 className="text-4xl font-bold text-blue-900">
-            Our Learning Environment
+            Life At VR Doctors
           </h2>
 
           <p className="mt-4 text-gray-600">
