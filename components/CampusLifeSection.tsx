@@ -6,10 +6,10 @@ const categories = [
   {
     tab: "Academics",
     photos: [
-      { src: "/campus/Academics-1.webp", alt: "Classroom" },
-      { src: "/campus/academics-2.webp", alt: "Study Hall" },
-      { src: "/campus/academics-3.webp", alt: "Lecturer clearing doubts" },
-      { src: "/campus/academics-4.webp", alt: "Students studying" },
+      { src: "/Campus/Academics-1 ", alt: "Classroom" },
+      { src: "/Campus/academics-2 ", alt: "Study Area" },
+      { src: "/Campus/academics-3 ", alt: "Library" },
+      { src: "/Campus/academics-4 ", alt: "Laboratory" },
     ],
     features: [
       {
@@ -27,10 +27,10 @@ const categories = [
   {
     tab: "Infrastructure",
     photos: [
-      { src: "/campus/infra-1.webp", alt: "Hostel Building" },
-      { src: "/campus/infra-2.webp", alt: "Student Rooms" },
-      { src: "/campus/infra-3.webp", alt: "Mess Hall" },
-      { src: "/campus/infra-4.webp", alt: "Dining Area" },
+      { src: "/Campus/infra-1.webp", alt: "Hostel Building" },
+      { src: "/Campus/infra-2.webp", alt: "Student Rooms" },
+      { src: "/Campus/infra-3.webp", alt: "Mess Hall" },
+      { src: "/Campus/infra-4.webp", alt: "Dining Area" },
     ],
     features: [
       {
@@ -48,10 +48,10 @@ const categories = [
   {
     tab: "Sports & Events",
     photos: [
-      { src: "/campus/events-1.webp", alt: "Cultural Festival" },
-      { src: "/campus/events-2.webp", alt: "Sports Day" },
-      { src: "/campus/events-3.webp", alt: "Student Events" },
-      { src: "/campus/events-4.webp", alt: "Celebrations" },
+      { src: "/Campus/events-1.webp", alt: "Cultural Festival" },
+      { src: "/Campus/events-2.webp", alt: "Sports Day" },
+      { src: "/Campus/events-3.webp", alt: "Student Events" },
+      { src: "/Campus/events-4.webp", alt: "Celebrations" },
     ],
     features: [
       {
