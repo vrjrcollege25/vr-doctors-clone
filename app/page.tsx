@@ -1,13 +1,13 @@
 import Navbar from "../components/Navbar";
+import HeroCarousel from "../components/HeroCarousel";
 import JourneySection from "../components/JourneySection";
+import TestimonialsSection from "../components/TestimonialsSection";
+import CampusLifeSection from "../components/CampusLifeSection";
 import DreamersSection from "../components/DreamersSection";
+import CampusVisitCTA from "../components/CampusVisitCTA";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
-import HeroCarousel from "../components/HeroCarousel";
-import VisionSection from "../components/VisionSection";
-import CampusLifeSection from "../components/CampusLifeSection";
-import CampusVisitCTA from "../components/CampusVisitCTA";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <Navbar />
       <HeroCarousel />
       <JourneySection />
-      <VisionSection />
+      <TestimonialsSection />
       <CampusLifeSection />
       <DreamersSection />
       <CampusVisitCTA />

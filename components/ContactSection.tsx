@@ -1,7 +1,4 @@
 import {
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
   FaPhone,
   FaEnvelope,
   FaMapMarkerAlt,
@@ -11,7 +8,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 py-12 md:py-16 bg-white"
+      className="scroll-mt-24 py-12 md:py-16 bg-gray-50"
     >
       <div className="max-w-6xl mx-auto px-4 md:px-6">
 
@@ -34,60 +31,79 @@ export default function ContactSection() {
         </div>
 
         {/* Contact Cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-5">
 
           {/* Phone */}
-          <div className="bg-gray-50 border border-gray-200 rounded-3xl p-6 text-center hover:shadow-lg transition">
+          <div className="bg-white border border-gray-200 rounded-2xl p-5 hover:shadow-lg transition">
 
-            <FaPhone className="text-4xl mx-auto text-orange-500" />
+            <div className="flex items-start gap-4">
 
-            <h3 className="mt-4 text-xl font-bold text-blue-900">
-              Call Us
-            </h3>
+              <FaPhone className="text-2xl text-orange-500 mt-1 shrink-0" />
 
-            <p className="mt-4 text-gray-600 leading-relaxed">
-              +91 9256 9256 40/41/42/43
-            </p>
+              <div>
+                <h3 className="font-bold text-blue-900">
+                  Call Us
+                </h3>
+
+                <p className="mt-1 text-gray-600 text-sm leading-relaxed">
+                  +91 9256 9256 40/41/42/43
+                </p>
+              </div>
+
+            </div>
 
           </div>
 
           {/* Email */}
-          <div className="bg-gray-50 border border-gray-200 rounded-3xl p-6 text-center hover:shadow-lg transition">
+          <div className="bg-white border border-gray-200 rounded-2xl p-5 hover:shadow-lg transition">
 
-            <FaEnvelope className="text-4xl mx-auto text-orange-500" />
+            <div className="flex items-start gap-4">
 
-            <h3 className="mt-4 text-xl font-bold text-blue-900">
-              Email Us
-            </h3>
+              <FaEnvelope className="text-2xl text-orange-500 mt-1 shrink-0" />
 
-            <p className="mt-4 text-gray-600 break-words">
-              admissions@vrdoctors.in
-            </p>
+              <div>
+                <h3 className="font-bold text-blue-900">
+                  Email Us
+                </h3>
+
+                <p className="mt-1 text-gray-600 text-sm break-words">
+                  admissions@vrdoctors.in
+                </p>
+              </div>
+
+            </div>
 
           </div>
 
           {/* Location */}
-          <div className="bg-gray-50 border border-gray-200 rounded-3xl p-6 text-center hover:shadow-lg transition">
+          <div className="bg-white border border-gray-200 rounded-2xl p-5 hover:shadow-lg transition">
 
-            <FaMapMarkerAlt className="text-4xl mx-auto text-orange-500" />
+            <div className="flex items-start gap-4">
 
-            <h3 className="mt-4 text-xl font-bold text-blue-900">
-              Campus Location
-            </h3>
+              <FaMapMarkerAlt className="text-2xl text-orange-500 mt-1 shrink-0" />
 
-            <p className="mt-4 text-gray-600">
-              Hyderabad,
-              Telangana
-            </p>
+              <div className="w-full">
 
-            <a
-              href="https://maps.app.goo.gl/NWiLz9Ka59mfEv1PA"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-5 bg-blue-900 text-white px-5 py-2 rounded-xl hover:bg-blue-800 transition"
-            >
-              Open In Maps
-            </a>
+                <h3 className="font-bold text-blue-900">
+                  Campus Location
+                </h3>
+
+                <p className="mt-1 text-gray-600 text-sm">
+                  Hyderabad, Telangana
+                </p>
+
+                <a
+                  href="https://maps.app.goo.gl/NWiLz9Ka59mfEv1PA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 bg-blue-900 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-800 transition"
+                >
+                  Open In Maps
+                </a>
+
+              </div>
+
+            </div>
 
           </div>
 
