@@ -6,7 +6,7 @@ const categories = [
   {
     tab: "Academics",
     photos: [
-      { src: "/campus/academics-1.webp", alt: "Classroom" },
+      { src: "/campus/Academics-1.webp", alt: "Classroom" },
       { src: "/campus/academics-2.webp", alt: "Study Hall" },
       { src: "/campus/academics-3.webp", alt: "Lecturer clearing doubts" },
       { src: "/campus/academics-4.webp", alt: "Students studying" },
