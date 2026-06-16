@@ -6,10 +6,10 @@ const categories = [
   {
     tab: "Academics",
     photos: [
-      { src: "/Campus/Academics-1 ", alt: "Classroom" },
-      { src: "/Campus/academics-2 ", alt: "Study Area" },
-      { src: "/Campus/academics-3 ", alt: "Library" },
-      { src: "/Campus/academics-4 ", alt: "Laboratory" },
+      { src: "/Campus/Academics-1.webp ", alt: "Classroom" },
+      { src: "/Campus/academics-2.webp ", alt: "Study Area" },
+      { src: "/Campus/academics-3.webp ", alt: "Library" },
+      { src: "/Campus/academics-4.webp ", alt: "Laboratory" },
     ],
     features: [
       {
