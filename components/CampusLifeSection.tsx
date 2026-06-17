@@ -1,15 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const categories = [
   {
     tab: "Academics",
     photos: [
-      { src: "/Campus/Academics-1.webp ", alt: "Classroom" },
-      { src: "/Campus/academics-2.webp ", alt: "Study Area" },
-      { src: "/Campus/academics-3.webp ", alt: "Library" },
-      { src: "/Campus/academics-4.webp ", alt: "Laboratory" },
+      { src: "/Campus/academics-1.webp", alt: "Classroom" },
+      { src: "/Campus/academics-2.webp", alt: "Study Area" },
+      { src: "/Campus/academics-3.webp", alt: "Library" },
+      { src: "/Campus/academics-4.webp", alt: "Laboratory" },
     ],
     features: [
       {
@@ -68,9 +69,45 @@ const categories = [
   },
 ];
 
+function PhotoTile({ src, alt }: { src: string; alt: string }) {
+  const [loaded, setLoaded] = useState(false);
+  
+
+  return (
+    <div
+      onTouchStart={() => {}}
+      className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-800 to-blue-600 aspect-square transition-transform duration-300 ease-out hover:scale-125 hover:z-20 hover:shadow-2xl active:scale-125 active:z-20 active:shadow-2xl"
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(min-width: 768px) 25vw, 50vw"
+        onLoad={() => setLoaded(true)}
+        onError={(e) => {
+          (e.target as HTMLImageElement).style.display = "none";
+        }}
+        className={`object-cover transition-all duration-500 ease-out ${
+          loaded ? "opacity-100 blur-0 scale-100" : "opacity-0 blur-lg scale-110"
+        }`}
+      />
+    </div>
+  );
+}
+
 export default function CampusLifeSection() {
   const [active, setActive] = useState(0);
+  const [visible, setVisible] = useState(true);
   const current = categories[active];
+
+  const handleTabClick = (index: number) => {
+    if (index === active) return;
+    setVisible(false);
+    setTimeout(() => {
+      setActive(index);
+      setVisible(true);
+    }, 150);
+  };
 
   return (
     <section className="py-12 md:py-16 bg-white">
@@ -91,12 +128,14 @@ export default function CampusLifeSection() {
         </div>
 
         {/* Tabs */}
-        <div className="flex justify-center gap-3 mb-8 flex-wrap">
+        <div role="tablist" className="flex justify-center gap-3 mb-8 flex-wrap">
           {categories.map((cat, index) => (
             <button
               key={cat.tab}
-              onClick={() => setActive(index)}
-              className={`px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 ${
+              role="tab"
+              aria-selected={active === index}
+              onClick={() => handleTabClick(index)}
+              className={`px-6 py-3 rounded-xl font-semibold text-sm transition-colors duration-300 ${
                 active === index
                   ? "bg-blue-900 text-white shadow-md"
                   : "bg-gray-100 text-blue-900 hover:bg-gray-200"
@@ -108,30 +147,22 @@ export default function CampusLifeSection() {
         </div>
 
         {/* Photo Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-          {current.photos.map((photo, i) => (
-            <div
-              key={i}
-              className={`overflow-hidden rounded-2xl bg-gradient-to-br ${
-                i === 0
-                  ? "from-blue-900 to-blue-700 md:col-span-2 md:row-span-2"
-                  : "from-blue-800 to-blue-600"
-              } aspect-square md:aspect-auto`}
-            >
-              <img
-                src={photo.src}
-                alt={photo.alt}
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = "none";
-                }}
-              />
-            </div>
+        <div
+          className={`grid grid-cols-2 md:grid-cols-4 gap-3 mb-8 transition-opacity duration-300 ${
+            visible ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          {current.photos.map((photo) => (
+            <PhotoTile key={photo.src} src={photo.src} alt={photo.alt} />
           ))}
         </div>
 
         {/* Feature Cards */}
-        <div className="grid md:grid-cols-2 gap-4">
+        <div
+          className={`grid md:grid-cols-2 gap-4 transition-opacity duration-300 ${
+            visible ? "opacity-100" : "opacity-0"
+          }`}
+        >
           {current.features.map((feature) => (
             <div
               key={feature.title}

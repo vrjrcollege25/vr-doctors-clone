@@ -9,47 +9,47 @@ const stats = [
   { target: 101, suffix: "+", label: "Medical seats in 2025" },
 ];
 
-function useCountUp(target: number, duration: number = 1800) {
-  const [count, setCount] = useState(0);
-  const [started, setStarted] = useState(false);
-
-  useEffect(() => {
-    if (!started) return;
-    let startTime: number | null = null;
-
-    const step = (now: number) => {
-      if (!startTime) startTime = now;
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const ease = 1 - Math.pow(1 - progress, 3);
-      setCount(Math.round(target * ease));
-      if (progress < 1) requestAnimationFrame(step);
-    };
-
-    requestAnimationFrame(step);
-  }, [started, target, duration]);
-
-  return { count, setStarted };
-}
-
 function StatCard({ target, suffix, label }: typeof stats[0]) {
   const ref = useRef<HTMLDivElement>(null);
-  const { count, setStarted } = useCountUp(target);
+  const rafRef = useRef<number | null>(null);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
+    const duration = 1800;
+
+    const animate = () => {
+      let startTime: number | null = null;
+      const step = (now: number) => {
+        if (!startTime) startTime = now;
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        setCount(Math.round(target * ease));
+        if (progress < 1) {
+          rafRef.current = requestAnimationFrame(step);
+        }
+      };
+      rafRef.current = requestAnimationFrame(step);
+    };
+
     const observer = new IntersectionObserver(
       ([entry]) => {
+        if (rafRef.current) cancelAnimationFrame(rafRef.current);
         if (entry.isIntersecting) {
-          setStarted(true);
-          observer.disconnect();
+          animate();
+        } else {
+          setCount(0); // reset so it replays next time it scrolls into view
         }
       },
       { threshold: 0.3 }
     );
 
     if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [setStarted]);
+    return () => {
+      observer.disconnect();
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, [target]);
 
   return (
     <div
@@ -68,7 +68,6 @@ export default function JourneySection() {
   return (
     <section className="py-12 md:py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4 md:px-4">
-
         <div className="text-center mb-10">
           <p className="text-orange-500 font-semibold uppercase tracking-widest">
             Our Journey So Far
@@ -92,7 +91,6 @@ export default function JourneySection() {
         <p className="text-center text-gray-500 mt-8 text-sm">
           Including MBBS, BDS and AYUSH admissions across India.
         </p>
-
       </div>
     </section>
   );
