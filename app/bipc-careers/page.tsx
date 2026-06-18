@@ -5,7 +5,6 @@ import BipcHero from "@/components/bipc/BipcHero";
 import WhatIsBipc from "@/components/bipc/WhatIsBipc";
 import HealthcareEcosystem from "@/components/bipc/HealthcareEcosystem";
 import RealitySection from "@/components/bipc/RealitySection";
-import CareerPaths from "@/components/bipc/CareerPaths";
 import WhyVRDoctorsGuides from "@/components/bipc/WhyVRDoctorsGuides";
 
 export default function BipcCareersPage() {
@@ -20,8 +19,6 @@ export default function BipcCareersPage() {
       <HealthcareEcosystem />
 
       <RealitySection />
-
-      <CareerPaths />
 
       <WhyVRDoctorsGuides />
 
