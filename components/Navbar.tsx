@@ -38,9 +38,20 @@ export default function Navbar() {
             Home
           </a>
 
+          <a href="/bipc-careers" className="hover:text-orange-500 transition">
+            World of Bipc
+          </a>
+
+
           <a href="/about" className="hover:text-orange-500 transition">
             About
           </a>
+
+          <a href="/courses" className="hover:text-orange-500 transition">
+            Courses
+          </a>
+
+
 
           <a href="/results" className="hover:text-orange-500 transition">
             Results
@@ -74,6 +85,17 @@ export default function Navbar() {
             Home
           </a>
 
+
+          <a
+            href="/bipc-careers"
+            onClick={() => setMenuOpen(false)}
+            className="block px-6 py-4 text-blue-900 font-medium hover:bg-gray-100"
+          >
+            World of Bipc
+          </a>
+
+          
+
           <a
             href="/about"
             onClick={() => setMenuOpen(false)}
@@ -88,6 +110,14 @@ export default function Navbar() {
             className="block px-6 py-4 text-blue-900 font-medium hover:bg-gray-100"
           >
             Results
+          </a>
+
+          <a
+            href="/courses"
+            onClick={() => setMenuOpen(false)}
+            className="block px-6 py-4 text-blue-900 font-medium hover:bg-gray-100"
+          >
+            Courses
           </a>
 
           <a
