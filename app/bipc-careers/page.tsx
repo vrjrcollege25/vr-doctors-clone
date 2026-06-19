@@ -6,6 +6,8 @@ import WhatIsBipc from "@/components/bipc/WhatIsBipc";
 import HealthcareEcosystem from "@/components/bipc/HealthcareEcosystem";
 import RealitySection from "@/components/bipc/RealitySection";
 import WhyVRDoctorsGuides from "@/components/bipc/WhyVRDoctorsGuides";
+import WhatsAppButton from "@/components/WhatsAppButton";
+
 
 export default function BipcCareersPage() {
   return (
@@ -23,6 +25,9 @@ export default function BipcCareersPage() {
       <WhyVRDoctorsGuides />
 
       <Footer />
+
+      <WhatsAppButton />
+
     </main>
   );
 }

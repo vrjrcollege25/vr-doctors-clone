@@ -5,6 +5,8 @@ import MedicalAdmissions from "@/components/results/MedicalAdmissions";
 import TopAchieversCarousel from "@/components/results/TopAchieversCarousel";
 import SuccessStories from "@/components/results/SuccessStories";
 import Footer from "../../components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+
 
 export default function Home() {
   return (
@@ -16,6 +18,7 @@ export default function Home() {
       <TopAchieversCarousel />
       <SuccessStories />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 }

@@ -15,7 +15,7 @@ export default function PhilosophySection() {
         <div className="text-center">
 
           <p className="text-orange-500 font-semibold uppercase tracking-widest">
-            Our Philosophy
+            Our Approach
           </p>
 
           <h2 className="mt-4 text-4xl md:text-5xl font-bold text-blue-900">

@@ -6,10 +6,7 @@ import ShortTermRevision from "@/components/courses/ShortTermRevision";
 import CourseSelector from "@/components/courses/CourseSelector";
 import WhyChooseVRDoctors from "@/components/courses/WhyChooseVRDoctors";
 import CampusVisitCTA from "../../components/CampusVisitCTA";
-
-
-
-
+import WhatsAppButton from "@/components/WhatsAppButton";
 import Footer from "../../components/Footer";
 
 export default function Home() {
@@ -23,6 +20,7 @@ export default function Home() {
       <CourseSelector />
       <WhyChooseVRDoctors />
       <CampusVisitCTA />
+      <WhatsAppButton />
       <Footer />
     </main>
   );

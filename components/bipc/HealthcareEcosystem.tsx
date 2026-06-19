@@ -225,7 +225,7 @@ export default function HealthcareEcosystem() {
           {/* L3 */}
           <div
             ref={detailsRef}
-            className="bg-white rounded-3xl p-6 shadow-lg"
+            className="bg-white rounded-3xl p-6 shadow-lg scroll-mt-24"
           >
             <h3 className="text-3xl font-bold text-blue-900">
               {selectedCareer.title}

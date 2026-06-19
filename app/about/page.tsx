@@ -8,6 +8,8 @@ import TrustSection from "@/components/about/TrustSection";
 import FacultySection from "@/components/about/FacultySection";
 import ChairmanMessage from "@/components/about/ChairmanMessage";
 import Footer from "../../components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+
 
 
 
@@ -23,6 +25,8 @@ export default function AboutPage() {
       <TrustSection />
       <FacultySection />
       <ChairmanMessage />
+      <WhatsAppButton />
+
       <Footer />
     </main>
   );

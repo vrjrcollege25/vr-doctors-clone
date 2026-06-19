@@ -93,7 +93,7 @@ export default function ContactSection() {
                 </p>
 
                 <a
-                  href="https://maps.app.goo.gl/NWiLz9Ka59mfEv1PA"
+                  href="https://maps.app.goo.gl/3qrkSSCw6kiYNkwH8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-3 bg-blue-900 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-800 transition"
