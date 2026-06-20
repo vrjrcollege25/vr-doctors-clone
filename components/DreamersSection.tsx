@@ -44,7 +44,7 @@ description:
 export default function DreamersSection() {
 const [activeStep, setActiveStep] = useState(0);
 
-return ( <section id="approach" className="py-12 md:py-16 bg-gray-50">
+return ( <section id="approach" className="py-8 md:py-16 bg-gray-50">
 
 ```
   <div className="max-w-6xl mx-auto px-4 md:px-6">

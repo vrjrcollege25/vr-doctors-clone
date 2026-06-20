@@ -66,7 +66,7 @@ function StatCard({ target, suffix, label }: typeof stats[0]) {
 
 export default function JourneySection() {
   return (
-    <section className="py-12 md:py-16 bg-white">
+    <section className="py-8 md:py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4 md:px-4">
         <div className="text-center mb-10">
           <p className="text-orange-500 font-semibold uppercase tracking-widest">

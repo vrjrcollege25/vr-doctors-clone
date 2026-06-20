@@ -41,54 +41,53 @@ const faculty = [
 
 export default function FacultySection() {
   return (
-    <section className="py-16 md:py-24 bg-blue-50">
+    <section className="py-12 md:py-16 bg-blue-50">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
 
-        <div className="text-center mb-14">
+        <div className="text-center mb-10">
 
-          <p className="text-orange-500 font-semibold uppercase tracking-widest">
+          <p className="text-orange-500 font-semibold uppercase tracking-widest text-sm md:text-base">
             Meet Our Faculty
           </p>
 
-          <h2 className="mt-4 text-4xl md:text-5xl font-bold text-blue-900">
-            The Mentors Behind Student Success
+          <h2 className="mt-3 md:mt-4 text-3xl md:text-5xl font-bold text-blue-900">
+            Expert Educators, Personal Mentors
           </h2>
 
-          <p className="max-w-3xl mx-auto mt-6 text-gray-600">
-            Experienced educators dedicated to guiding students
-            through every stage of their academic journey.
+          <p className="max-w-3xl mx-auto mt-4 md:mt-6 text-sm md:text-base text-gray-600">
+            Experienced educators dedicated to guiding students through every stage of their academic journey.
           </p>
 
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 gap-5 md:gap-6">
 
           {faculty.map((member) => (
             <div
               key={member.image}
-              className="bg-white rounded-3xl overflow-hidden border border-gray-200 hover:shadow-xl transition"
+              className="bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow"
             >
 
               <Image
                 src={member.image}
                 alt={member.name}
-                width={500}
-                height={500}
-                className="w-full h-72 object-cover"
+                width={400}
+                height={400}
+                className="w-full h-52 object-cover"
               />
 
-              <div className="p-6">
+              <div className="p-5">
 
-                <h3 className="text-xl font-bold text-blue-900">
+                <h3 className="text-lg font-bold text-blue-900">
                   {member.name}
                 </h3>
 
-                <p className="mt-2 text-orange-500 font-semibold">
+                <p className="mt-1 text-sm font-semibold text-orange-500">
                   {member.subject}
                 </p>
 
-                <p className="mt-2 text-gray-600">
+                <p className="mt-1 text-xs md:text-sm text-gray-600">
                   {member.experience}
                 </p>
 

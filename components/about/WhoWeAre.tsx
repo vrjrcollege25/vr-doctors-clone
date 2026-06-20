@@ -2,49 +2,49 @@ import Image from "next/image";
 
 export default function WhoWeAre() {
   return (
-    <section className="py-12 md:py-24 bg-white">
+    <section className="py-12 md:py-20 bg-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
 
           {/* Images */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-3 md:gap-4">
 
             <Image
-              src="/about/about-1.webp"
+              src="/Campus/academics-1.webp"
               alt="VR Doctors Campus"
               width={400}
               height={400}
               sizes="(min-width: 768px) 25vw, 45vw"
-              className="w-full aspect-square object-cover rounded-3xl"
+              className="w-full aspect-square object-cover rounded-2xl"
             />
 
             <Image
-              src="/about/about-2.webp"
+              src="/Campus/academics-2.webp"
               alt="Students"
               width={400}
               height={400}
               sizes="(min-width: 768px) 25vw, 45vw"
-              className="w-full aspect-square object-cover rounded-3xl md:mt-10"
+              className="w-full aspect-square object-cover rounded-2xl md:mt-8"
             />
 
             <Image
-              src="/about/about-3.webp"
+              src="/Campus/infra-1.webp"
               alt="Faculty"
               width={400}
               height={400}
               sizes="(min-width: 768px) 25vw, 45vw"
-              className="w-full aspect-square object-cover rounded-3xl md:mt-10"
+              className="w-full aspect-square object-cover rounded-2xl md:mt-8"
             />
 
             <Image
-              src="/about/about-4.webp"
+              src="/Campus/events-1.webp"
               alt="Academic Environment"
               width={400}
               height={400}
               sizes="(min-width: 768px) 25vw, 45vw"
-              className="w-full aspect-square object-cover rounded-3xl md:mt-10"
+              className="w-full aspect-square object-cover rounded-2xl"
             />
 
           </div>
@@ -56,11 +56,11 @@ export default function WhoWeAre() {
               Who We Are
             </p>
 
-            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 leading-tight">
+            <h2 className="mt-3 md:mt-4 text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 leading-tight">
               A Vision That Became Reality
             </h2>
 
-            <p className="mt-6 text-gray-600 leading-relaxed">
+            <p className="mt-4 md:mt-6 text-sm md:text-base text-gray-600 leading-relaxed">
               VR Doctors Academy was founded in 2019 with a simple
               vision — helping students transform their dream of
               becoming a doctor into reality through disciplined
@@ -68,7 +68,7 @@ export default function WhoWeAre() {
               environment.
             </p>
 
-            <p className="mt-6 text-gray-600 leading-relaxed">
+            <p className="mt-4 md:mt-6 text-sm md:text-base text-gray-600 leading-relaxed">
               What started with just 95 students has grown into a
               thriving academic ecosystem supporting more than 1000
               students every year across Hyderabad. Through consistent

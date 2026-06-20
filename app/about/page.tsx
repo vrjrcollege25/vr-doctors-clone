@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import AboutHero from "@/components/about/AboutHero";
-import WhatMakesUsDifferent from "@/components/about/WhatMakesUsDifferent";
 import WhoWeAre from "@/components/about/WhoWeAre";
 import JourneyTimeline from "@/components/about/JourneyTimeline";
 import ImpactSection from "@/components/about/ImpactSection";
@@ -10,17 +9,13 @@ import ChairmanMessage from "@/components/about/ChairmanMessage";
 import Footer from "../../components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-
-
-
 export default function AboutPage() {
   return (
     <main>
       <Navbar />
       <AboutHero />
       <WhoWeAre />
-      <WhatMakesUsDifferent />
-      <JourneyTimeline /> 
+      <JourneyTimeline />
       <ImpactSection />
       <TrustSection />
       <FacultySection />

@@ -2,44 +2,56 @@ import Image from "next/image";
 
 export default function LongTermNeet() {
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section className="py-12 md:py-16 bg-blue-50">
 
       <div className="max-w-6xl mx-auto px-4 md:px-6">
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
 
           <div>
 
-            <p className="text-orange-500 font-semibold uppercase tracking-widest">
+            <p className="text-orange-500 font-semibold uppercase tracking-widest text-sm md:text-base">
               Long-Term NEET Program
             </p>
 
-            <h2 className="mt-4 text-3xl md:text-5xl font-bold text-blue-900">
-              Comprehensive Preparation For Medical Aspirants
+            <h2 className="mt-3 md:mt-4 text-3xl md:text-5xl font-bold text-blue-900">
+              Complete Medical Preparation
             </h2>
 
-            <p className="mt-6 text-gray-600 leading-relaxed">
-              A dedicated residential NEET program focused on concept
-              building, continuous practice, testing and mentoring.
-              Designed for students committed to securing a medical
-              seat through disciplined preparation.
+            <p className="mt-4 md:mt-6 text-sm md:text-base text-gray-600 leading-relaxed">
+              Our flagship program combines concept mastery, intensive practice, regular testing and personalized mentoring. Perfect for committed students aiming for top medical colleges.
             </p>
 
-            <ul className="mt-8 space-y-3 text-gray-700">
+            <ul className="mt-6 md:mt-8 space-y-2.5 text-gray-700 text-sm md:text-base">
 
-              <li>✓ Complete NEET Syllabus Coverage</li>
-              <li>✓ Concept Building & Application</li>
-              <li>✓ Weekly Tests & Grand Tests</li>
-              <li>✓ Performance Tracking</li>
-              <li>✓ Personalized Academic Support</li>
+              <li className="flex items-start gap-2">
+                <span className="text-orange-500 font-bold flex-shrink-0">✓</span>
+                <span>Complete NEET Syllabus Coverage</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-orange-500 font-bold flex-shrink-0">✓</span>
+                <span>Concept Building & Application</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-orange-500 font-bold flex-shrink-0">✓</span>
+                <span>Weekly Tests & Grand Tests</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-orange-500 font-bold flex-shrink-0">✓</span>
+                <span>Performance Tracking & Analysis</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-orange-500 font-bold flex-shrink-0">✓</span>
+                <span>Personalized Academic Support</span>
+              </li>
 
             </ul>
 
             <a
               href="/contact"
-              className="inline-block mt-8 bg-blue-900 text-white px-6 py-3 rounded-xl hover:bg-blue-800 transition"
+              className="inline-block mt-8 bg-gradient-to-r from-blue-900 to-blue-800 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl hover:from-blue-800 hover:to-blue-700 transition font-semibold text-sm md:text-base shadow-lg"
             >
-              Learn More →
+              Start Your NEET Journey →
             </a>
 
           </div>
@@ -47,11 +59,11 @@ export default function LongTermNeet() {
           <div>
 
             <Image
-              src="/courses/long-term-neet.webp"
+              src="/Campus/academics-3.webp"
               alt="Long Term NEET Program"
               width={1200}
               height={900}
-              className="w-full rounded-3xl shadow-xl object-cover"
+              className="w-full rounded-2xl shadow-lg object-cover"
             />
 
           </div>

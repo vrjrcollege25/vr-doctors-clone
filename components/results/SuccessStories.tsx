@@ -27,37 +27,35 @@ const videos = [
 
 export default function SuccessStories() {
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section className="py-12 md:py-16 bg-gray-50">
 
       <div className="max-w-6xl mx-auto px-4 md:px-6">
 
-        <div className="text-center mb-14">
+        <div className="text-center mb-10">
 
-          <p className="text-orange-500 font-semibold uppercase tracking-widest">
+          <p className="text-orange-500 font-semibold uppercase tracking-widest text-sm md:text-base">
             Success Stories
           </p>
 
-          <h2 className="mt-4 text-3xl md:text-5xl font-bold text-blue-900">
-            Student & Parent Testimonials
+          <h2 className="mt-3 md:mt-4 text-3xl md:text-5xl font-bold text-blue-900">
+            Real Stories, Real Results
           </h2>
 
-          <p className="max-w-3xl mx-auto mt-6 text-gray-600">
-            Real stories from students and parents who trusted
-            VR Doctors Academy on their journey toward medical careers.
+          <p className="max-w-3xl mx-auto mt-4 md:mt-6 text-sm md:text-base text-gray-600">
+            Hear from students and parents who trusted VR Doctors Academy on their journey toward medical careers.
           </p>
 
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-5 md:gap-6">
 
           {videos.map((video) => (
             <div
               key={video.embedId}
-              className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition"
+              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition group"
             >
 
-              <div className="aspect-video">
-
+              <div className="aspect-video relative bg-gray-900 overflow-hidden">
                 <iframe
                   className="w-full h-full"
                   src={`https://www.youtube.com/embed/${video.embedId}`}
@@ -65,16 +63,15 @@ export default function SuccessStories() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
-
               </div>
 
-              <div className="p-6">
+              <div className="p-5 md:p-6">
 
-                <h3 className="text-xl font-bold text-blue-900">
+                <h3 className="text-lg md:text-xl font-bold text-blue-900 group-hover:text-orange-500 transition">
                   {video.title}
                 </h3>
 
-                <p className="mt-3 text-gray-600">
+                <p className="mt-2 md:mt-3 text-sm md:text-base text-gray-600">
                   {video.description}
                 </p>
 
@@ -85,15 +82,15 @@ export default function SuccessStories() {
 
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-10">
 
           <a
             href="https://www.youtube.com/@VR_JuniorCollege"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-blue-900 text-white px-8 py-4 rounded-xl hover:bg-blue-800 transition font-semibold"
+            className="inline-block bg-gradient-to-r from-blue-900 to-blue-800 text-white px-6 md:px-8 py-3 md:py-4 rounded-xl hover:from-blue-800 hover:to-blue-700 transition font-semibold text-sm md:text-base shadow-lg"
           >
-            View More Testimonials →
+            Watch More Stories on YouTube →
           </a>
 
         </div>

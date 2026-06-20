@@ -152,21 +152,25 @@ export default function HealthcareEcosystem() {
   const selectedCareer =
     selectedEcosystem.careers[activeCareer];
   return (
-    <section className="py-16 md:py-24 bg-blue-50">
+    <section className="py-12 md:py-16 bg-blue-50">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
-          <p className="text-orange-500 font-semibold uppercase tracking-widest">
+        <div className="text-center mb-10">
+          <p className="text-orange-500 font-semibold uppercase tracking-widest text-sm md:text-base">
             Healthcare Ecosystem
           </p>
-          <h2 className="mt-4 text-3xl md:text-5xl font-bold text-blue-900">
-            Explore The World Of BiPC
+          <h2 className="mt-3 md:mt-4 text-3xl md:text-5xl font-bold text-blue-900">
+            Explore Careers In BiPC
           </h2>
+          <p className="max-w-3xl mx-auto mt-4 md:mt-6 text-sm md:text-base text-gray-600">
+            BiPC opens doors to diverse healthcare and life sciences careers beyond just medicine.
+          </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr_2fr] gap-6">
-          {/* L1 */}
-          <div className="bg-white rounded-3xl p-4 shadow-lg">
-            <h3 className="font-bold text-blue-900 mb-4">
-              Ecosystems
+
+        <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6">
+          {/* L1 - Ecosystems Sidebar */}
+          <div className="bg-white rounded-2xl p-4 shadow-md">
+            <h3 className="font-bold text-blue-900 mb-3 text-sm">
+              Field of Study
             </h3>
             <div className="space-y-2">
               {ecosystems.map((item, index) => {
@@ -177,92 +181,98 @@ export default function HealthcareEcosystem() {
                     onClick={() => {
                       setActiveEcosystem(index);
                       setActiveCareer(0);
-
                       scrollOnMobile(careersRef);
                     }}
-                    className={`w-full flex items-center gap-3 p-4 rounded-xl transition ${
+                    className={`w-full flex items-center gap-2.5 p-3 rounded-lg transition text-sm ${
                       activeEcosystem === index
                         ? "bg-blue-900 text-white"
-                        : "bg-blue-50 text-blue-900"
+                        : "bg-blue-50 text-blue-900 hover:bg-blue-100"
                     }`}
                   >
-                    <Icon />
-                    {item.title}
+                    <Icon className="flex-shrink-0" />
+                    <span className="font-medium truncate">{item.title}</span>
                   </button>
                 );
               })}
             </div>
           </div>
-          {/* L2 */}
-          <div
-            ref={careersRef}
-             className="scroll-mt-32 bg-white rounded-3xl p-4 shadow-lg"          >
-            <h3 className="font-bold text-blue-900 mb-4">
-              Careers
-            </h3>
-            <div className="space-y-2">
-              {selectedEcosystem.careers.map(
-                (career, index) => (
+
+          {/* L2 + L3 - Careers and Details */}
+          <div className="space-y-5">
+            {/* Careers */}
+            <div
+              ref={careersRef}
+              className="scroll-mt-32 bg-white rounded-2xl p-4 shadow-md"
+            >
+              <h3 className="font-bold text-blue-900 mb-3 text-sm">
+                Career Options
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                {selectedEcosystem.careers.map((career, index) => (
                   <button
                     key={career.title}
                     onClick={() => {
                       setActiveCareer(index);
-
                       scrollOnMobile(detailsRef);
                     }}
-                    className={`w-full text-left p-4 rounded-xl transition ${
+                    className={`p-3 rounded-lg transition text-xs md:text-sm font-medium ${
                       activeCareer === index
                         ? "bg-orange-500 text-white"
-                        : "bg-blue-50 text-blue-900"
+                        : "bg-blue-50 text-blue-900 hover:bg-blue-100"
                     }`}
+                    title={career.title}
                   >
                     {career.title}
                   </button>
-                )
-              )}
-            </div>
-          </div>
-          {/* L3 */}
-          <div
-            ref={detailsRef}
-            className="bg-white rounded-3xl p-6 shadow-lg scroll-mt-24"
-          >
-            <h3 className="text-3xl font-bold text-blue-900">
-              {selectedCareer.title}
-            </h3>
-            <div className="grid sm:grid-cols-2 gap-4 mt-6">
-              <div className="bg-blue-50 rounded-xl p-4">
-                <p className="text-sm text-gray-500">
-                  Duration
-                </p>
-                <p className="font-bold">
-                  {selectedCareer.duration}
-                </p>
-              </div>
-              <div className="bg-blue-50 rounded-xl p-4">
-                <p className="text-sm text-gray-500">
-                  Entrance
-                </p>
-                <p className="font-bold">
-                  {selectedCareer.entrance}
-                </p>
+                ))}
               </div>
             </div>
-            <div className="mt-4 bg-blue-50 rounded-xl p-4">
-              <p className="text-sm text-gray-500">
-                Focus
-              </p>
-              <p className="font-bold text-blue-900">
-                {selectedCareer.focus}
-              </p>
-            </div>
-            <div className="mt-4 bg-blue-50 rounded-xl p-4">
-              <p className="text-sm text-gray-500">
-                Career Paths
-              </p>
-              <p className="font-bold text-blue-900">
-                {selectedCareer.paths}
-              </p>
+
+            {/* Details */}
+            <div
+              ref={detailsRef}
+              className="bg-white rounded-2xl p-5 md:p-6 shadow-md scroll-mt-24"
+            >
+              <h3 className="text-2xl md:text-3xl font-bold text-blue-900">
+                {selectedCareer.title}
+              </h3>
+
+              <div className="grid sm:grid-cols-2 gap-3 mt-5">
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <p className="text-xs text-gray-600 font-semibold mb-1">
+                    Duration
+                  </p>
+                  <p className="font-bold text-blue-900 text-sm">
+                    {selectedCareer.duration}
+                  </p>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <p className="text-xs text-gray-600 font-semibold mb-1">
+                    Entrance Exam
+                  </p>
+                  <p className="font-bold text-blue-900 text-sm">
+                    {selectedCareer.entrance}
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-3 bg-orange-50 rounded-lg p-4 border border-orange-200">
+                <p className="text-xs text-gray-600 font-semibold mb-1">
+                  Focus Area
+                </p>
+                <p className="font-bold text-blue-900 text-sm">
+                  {selectedCareer.focus}
+                </p>
+              </div>
+
+              <div className="mt-3 bg-green-50 rounded-lg p-4 border border-green-200">
+                <p className="text-xs text-gray-600 font-semibold mb-1">
+                  Career Paths
+                </p>
+                <p className="font-bold text-blue-900 text-sm">
+                  {selectedCareer.paths}
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -49,7 +49,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <section className="relative h-[65vh] md:h-[85vh] overflow-hidden">
+    <section className="relative h-[50vh] md:h-[85vh] overflow-hidden">
 
       {/* Background Image */}
       <Image
