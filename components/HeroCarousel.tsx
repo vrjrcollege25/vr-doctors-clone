@@ -5,21 +5,21 @@ import Image from "next/image";
 
 const slides = [
   {
-    image: "/hero-dream.png",
+    image: "/hero-dream.webp",
     title: "Every Doctor Begins With A Dream",
     subtitle: "Vision Into Reality",
     description:
       "Do you dream of wearing a white coat? Every successful doctor starts with a vision for the future.",
   },
   {
-    image: "/hero-preparation.png",
+    image: "/hero-preparation.webp",
     title: "The Journey Starts Here",
     subtitle: "Vision Into Reality",
     description:
       "Expert faculty, structured preparation, mentoring and a focused residential environment help students reach their goals.",
   },
   {
-    image: "/hero-success.png",
+    image: "/hero-success.webp",
     title: "Dreams Become Reality",
     subtitle: "Vision Into Reality",
     description:

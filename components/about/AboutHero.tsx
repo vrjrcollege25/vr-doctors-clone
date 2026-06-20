@@ -1,14 +1,14 @@
 export default function AboutHero() {
   return (
-    <section className="relative py-24 md:py-36 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white overflow-hidden">
+    <section className="relative py-18 md:py-24 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 text-white overflow-hidden">
 
-      <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
+      <div className="max-w-5xl mx-auto px-5 text-center relative z-9">
 
         <p className="text-orange-400 font-semibold uppercase tracking-widest">
           About VR Doctors Academy
         </p>
 
-        <h1 className="mt-6 text-5xl md:text-7xl font-bold leading-tight">
+        <h1 className="mt-5 text-4xl md:text-6xl font-bold leading-tight">
           Transforming Aspirations
           <br />
           Into Medical Careers
@@ -23,7 +23,7 @@ export default function AboutHero() {
           vision of becoming a doctor into reality.
         </p>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
+        <div className="flex flex-col sm:flex-row justify-center gap-3 mt-8">
 
           <a
             href="/results"
@@ -33,10 +33,10 @@ export default function AboutHero() {
           </a>
 
           <a
-            href="#contact"
+            href="/contact"
             className="border border-white hover:bg-white hover:text-blue-900 transition px-8 py-4 rounded-xl font-semibold"
           >
-            Visit Campus
+            Book an appointment
           </a>
 
         </div>

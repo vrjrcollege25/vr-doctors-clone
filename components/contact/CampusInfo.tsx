@@ -16,6 +16,7 @@ export default function CampusInfo() {
           <p className="text-orange-500 font-semibold uppercase tracking-widest">
             Visit Our Campus
           </p>
+          
 
           <h2 className="mt-4 text-4xl md:text-5xl font-bold text-blue-900">
             Connect With VR Doctors
