@@ -11,3 +11,21 @@ https://vr-doctors-clone.vercel.app
 
 GitHub:
 https://github.com/vrjrcollege25/vr-doctors-clone
+
+
+Need to add pictures 
+
+public/
+  campus/
+    academics-1.jpg
+    academics-2.jpg
+    academics-3.jpg
+    academics-4.jpg
+    infra-1.jpg
+    infra-2.jpg
+    infra-3.jpg
+    infra-4.jpg
+    events-1.jpg
+    events-2.jpg
+    events-3.jpg
+    events-4.jpg

@@ -37,7 +37,7 @@ export default function WhatIsBipc() {
           <div>
 
             <Image
-              src="/bipc/bipc-intro.webp"
+              src="/bipc-intro.webp"
               alt="World of BiPC"
               width={1200}
               height={900}

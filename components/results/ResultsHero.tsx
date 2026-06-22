@@ -5,7 +5,7 @@ interface ResultsHeroProps {
 }
 
 export default function ResultsHero({
-  backgroundImage = "/Campus/academics-1.webp"
+  backgroundImage = "/results hero.webp"
 }: ResultsHeroProps) {
   return (
     <section className="relative py-12 md:py-20 overflow-hidden">
@@ -39,7 +39,7 @@ export default function ResultsHero({
           Guided Since 2019
         </h1>
 
-        <p className="max-w-3xl mx-auto mt-4 md:mt-6 text-base md:text-lg text-gray-100">
+        <p className="max-w-3xl mx-auto mt-4 md:mt-6 text-base md:text-lg text-blue-100">
           Every result represents a student, a dream and years of
           disciplined preparation. Our commitment to excellence has
           helped hundreds of students begin their medical journey.

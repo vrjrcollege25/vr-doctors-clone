@@ -1,19 +1,19 @@
 const stats = [
   {
     number: "101+",
-    label: "Medical Seats 2025",
+    label: "Medical Seats in 2025",
     icon: "🎓",
     context: "Current year admissions"
   },
   {
-    number: "99%",
+    number: "50%",
     label: "Success Rate",
     icon: "⭐",
     context: "Students achieving seats"
   },
   {
-    number: "AIR 1-500",
-    label: "Top Ranks",
+    number: "AIR 206",
+    label: "Top Rank",
     icon: "🏆",
     context: "NEET All India Rankings"
   },
