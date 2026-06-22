@@ -55,7 +55,7 @@ export default function ResultsHero({
           </a>
 
           <a
-            href="#contact"
+            href="/contact"
             className="border border-white hover:bg-white hover:text-blue-900 transition px-6 md:px-8 py-3 md:py-4 rounded-xl font-semibold text-white text-sm md:text-base"
           >
             Contact Admissions
