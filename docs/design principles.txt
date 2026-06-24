@@ -1,0 +1,8 @@
+1. Mobile First
+2. Real photography over AI images
+3. Less scrolling when possible
+4. Interactive only when it improves UX
+5. One purpose per section
+6. Reduce duplicate CTAs
+7. Parents are primary decision makers
+8. Students are secondary users
