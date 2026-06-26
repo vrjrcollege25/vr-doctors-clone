@@ -2,40 +2,40 @@ import Image from "next/image";
 
 const faculty = [
   {
-    name: "Faculty Name",
-    subject: "Biology",
-    experience: "12+ Years Experience",
-    image: "/faculty/faculty-1.webp",
+    name: "KVR Sir",
+    subject: "Academic Head",
+    experience: "37+ Years Experience",
+    image: "/faculty/KVR Sir.webp",
   },
   {
-    name: "Faculty Name",
-    subject: "Physics",
-    experience: "10+ Years Experience",
-    image: "/faculty/faculty-2.webp",
+    name: "G Ashok",
+    subject: "Sr. Physics",
+    experience: "22+ Years Experience",
+    image: "/faculty/G Ashok.webp",
   },
   {
-    name: "Faculty Name",
-    subject: "Chemistry",
-    experience: "15+ Years Experience",
-    image: "/faculty/faculty-3.webp",
+    name: "B Nagesh",
+    subject: "Sr. Botany",
+    experience: "20+ Years Experience",
+    image: "/faculty/B Nagesh.webp",
   },
   {
-    name: "Faculty Name",
-    subject: "Botany",
+    name: "M Srinath",
+    subject: "Sr. Zoology",
     experience: "8+ Years Experience",
-    image: "/faculty/faculty-4.webp",
+    image: "/faculty/M Srinath.webp",
   },
   {
-    name: "Faculty Name",
-    subject: "Zoology",
-    experience: "9+ Years Experience",
-    image: "/faculty/faculty-5.webp",
+    name: "P Malyadri",
+    subject: "Sr Chemisty",
+    experience: "18+ Years Experience",
+    image: "/faculty/P Malyadri.webp",
   },
   {
-    name: "Faculty Name",
-    subject: "Academic Mentor",
-    experience: "10+ Years Experience",
-    image: "/faculty/faculty-6.webp",
+    name: "K Prabhakar Reddy",
+    subject: "Sr Zoology",
+    experience: "16+ Years Experience",
+    image: "/faculty/K Prabhakar Reddy.webp",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function FacultySection() {
 
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-5 md:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
 
           {faculty.map((member) => (
             <div
@@ -74,7 +74,7 @@ export default function FacultySection() {
                 alt={member.name}
                 width={400}
                 height={400}
-                className="w-full h-52 object-cover"
+                className="w-full h-auto object-contain"
               />
 
               <div className="p-5">
