@@ -6,42 +6,42 @@ import Image from "next/image";
 const timeline = [
   {
     year: "2019",
-    image: "/journey/2019.jpg",
+    image: "/journey/2019.webp",
     title: "VR Doctors Academy Founded",
     description:
       "Started with a vision to help aspiring medical students transform their dreams into reality.",
   },
   {
     year: "2020",
-    image: "/journey/2020.jpg",
+    image: "/journey/2020.webp",
     title: "Produced Our First Batch Of Doctors",
     description:
       "The first successful batch marked the beginning of a journey that would impact hundreds of future medical professionals.",
   },
   {
     year: "2022",
-    image: "/journey/2022.jpg",
+    image: "/journey/2022.webp",
     title: "Strengthened Residential NEET Programs",
     description:
       "Built a disciplined residential ecosystem designed to maximize student success and consistency.",
   },
   {
     year: "2023",
-    image: "/journey/2023.jpg",
+    image: "/journey/2023.webp",
     title: "Launched VRIIT",
     description:
       "Expanded academic offerings to support IIT aspirants through a dedicated program.",
   },
   {
     year: "2024",
-    image: "/journey/2024.jpg",
+    image: "/journey/2024.webp",
     title: "Expanded Through VR Junior College",
     description:
       "Broadened academic pathways and strengthened the educational ecosystem for students.",
   },
   {
     year: "2026",
-    image: "/journey/2026.jpg",
+    image: "/journey/2026.webp",
     title: "Building The Next Chapter",
     description:
       "Continuing our efforts to provide quality education to future healthcare professionals.",
