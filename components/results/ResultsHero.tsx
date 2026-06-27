@@ -5,7 +5,7 @@ interface ResultsHeroProps {
 }
 
 export default function ResultsHero({
-  backgroundImage = "/results hero.WEBP",
+  backgroundImage = "/results hero.webp",
 }: ResultsHeroProps) {
   return (
     <section className="relative py-12 md:py-20 overflow-hidden">
