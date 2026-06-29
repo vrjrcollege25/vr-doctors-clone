@@ -1,164 +1,133 @@
 "use client";
 
-import { useEffect, useRef, useCallback } from "react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const testimonials = [
   {
     name: "Anumalla Akshitha",
-    college: "Osmania University",
-    score: "Score: 617 · AIR 206",
+    college: "Osmania Medical College",
+    rank: "Score 617/720",
     quote:
-      "I am very proud to be a part of VR Doctors Academy — homely food, hygienic rooms and excellent faculty helped me fulfill my dream.",
-    avatar: "👩",
+      "VR Doctors Academy gave me the discipline, faculty support and confidence to achieve my dream.",
+    image: "/students/anumalla.webp",
   },
   {
     name: "Annangi Akhila",
-    college: "Osmania University",
-    score: "MBBS Seat Secured",
+    college: "Osmania Medical College",
+    rank: "Govt Seat Secured",
     quote:
-      "They provide great infrastructure with well experienced faculties and stress free education. Thank you VR.",
-    avatar: "👩",
+      "Excellent faculty, stress-free learning and a wonderful residential environment helped me succeed.",
+    image: "/students/akhila.webp",
   },
   {
     name: "Bisaoi Vamshi Krishna",
-    college: "Osmania University",
-    score: "MBBS Seat Secured",
+    college: "Gandhi Medical College",
+    rank: "AIR 507",
     quote:
-      "The academics here are excellent with standardized and supportive lecturers. I want to thank the entire VR team.",
-    avatar: "👨",
+      "The study culture and mentoring at VR Doctors made all the difference in my preparation.",
+    image: "/students/vamshi.webp",
   },
   {
     name: "Dodla Vaishnavi",
-    college: "Govt. College, Siddipet",
-    score: "MBBS Seat Secured",
+    college: "Government Medical College, Siddipet",
+    rank: "MBBS Seat Secured",
     quote:
-      "Well experienced faculties, healthy food and stress free education. VR Doctors changed my life.",
-    avatar: "👩",
-  },
-  {
-    name: "Ravi Kumar",
-    college: "Gandhi Medical College",
-    score: "MBBS Seat Secured",
-    quote:
-      "The mentoring and study culture at VR Doctors is unmatched. I got my seat because of the discipline I built here.",
-    avatar: "👨",
+      "Healthy food, experienced lecturers and constant motivation helped me achieve my goal.",
+    image: "/students/vaishnavi.webp",
   },
 ];
 
-export default function TestimonialsSection() {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const currentRef = useRef(0);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const cardWidthRef = useRef(0);
-  const GAP = 12;
+function TestimonialCard({
+  testimonial,
+}: {
+  testimonial: (typeof testimonials)[0];
+}) {
+  return (
+    <div className="bg-white rounded-3xl shadow-lg border border-gray-200 p-6 h-full flex flex-col">
 
-  const isMobile = () =>
-    typeof window !== "undefined" && window.innerWidth <= 640;
+      {/* Header */}
 
-  const visibleCount = () => (isMobile() ? 1 : 2);
+      <div className="flex justify-between items-start">
 
-  const build = useCallback(() => {
-    if (!trackRef.current || !containerRef.current) return;
-    const v = visibleCount();
-    const containerWidth = containerRef.current.offsetWidth;
-    cardWidthRef.current =
-      v === 1 ? containerWidth : (containerWidth - GAP) / 2;
-    const step = cardWidthRef.current + GAP;
+        <Image
+          src={testimonial.image}
+          alt={testimonial.name}
+          width={96}
+          height={96}
+          className="rounded-full object-cover border-[3px] border-orange-500 shadow-m"
+        />
 
-    const extended = [
-      ...testimonials,
-      ...testimonials.slice(0, v + 1),
-    ];
+        <span className="bg-orange-500 text-white text-xs font-semibold px-3 py-2 rounded-full">
+          {testimonial.rank}
+        </span>
 
-    trackRef.current.innerHTML = extended
-      .map(
-        (t) => `
-        <div style="
-          background: #1e3a5f;
-          border-radius: 16px;
-          padding: 1.25rem;
-          width: ${cardWidthRef.current}px;
-          flex-shrink: 0;
-          box-sizing: border-box;
-        ">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:0.75rem;">
-            <div style="
-              width:40px;height:40px;border-radius:50%;
-              background:#2d5a8e;border:2px solid #f97316;
-              display:flex;align-items:center;justify-content:center;
-              font-size:15px;flex-shrink:0;
-            ">${t.avatar}</div>
-            <div>
-              <div style="color:#f97316;font-size:13px;font-weight:600;">${t.name}</div>
-              <div style="color:#93b4d4;font-size:11px;margin-top:2px;">${t.college}</div>
-              <div style="
-                background:#f97316;color:#fff;font-size:10px;
-                font-weight:600;padding:2px 7px;border-radius:20px;
-                margin-top:4px;display:inline-block;
-              ">${t.score}</div>
-            </div>
-          </div>
-          <div style="color:#f97316;font-size:18px;font-weight:700;margin-bottom:4px;">"</div>
-          <div style="color:#cbd5e1;font-size:12px;line-height:1.6;">${t.quote}</div>
-        </div>
-      `
-      )
-      .join("");
+      </div>
 
-    trackRef.current.style.transition = "none";
-    trackRef.current.style.transform = `translateX(-${
-      currentRef.current * step
-    }px)`;
-  }, []);
+      {/* Quote */}
 
-  const next = useCallback(() => {
-    if (!trackRef.current) return;
-    const step = cardWidthRef.current + GAP;
-    currentRef.current =
-      (currentRef.current + 1) % testimonials.length;
+      <p className="mt-6 text-gray-700 leading-relaxed italic flex-grow">
+        "{testimonial.quote}"
+      </p>
 
-    trackRef.current.style.transition =
-      "transform 0.6s cubic-bezier(0.4,0,0.2,1)";
-    trackRef.current.style.transform = `translateX(-${
-      currentRef.current * step
-    }px)`;
+      {/* Divider */}
 
-    if (currentRef.current === 0) {
-      setTimeout(() => {
-        if (!trackRef.current) return;
-        trackRef.current.style.transition = "none";
-        trackRef.current.style.transform = "translateX(0)";
-      }, 650);
-    }
-  }, []);
+      <div className="border-t my-6"></div>
 
-  const startTimer = useCallback(() => {
-    timerRef.current = setInterval(next, 5000);
-  }, [next]);
+      {/* College */}
 
-  const stopTimer = useCallback(() => {
-    if (timerRef.current) clearInterval(timerRef.current);
-  }, []);
+      <p className="text-xs uppercase tracking-wider text-gray-500">
+        Now Studying At
+      </p>
+
+      <h3 className="text-lg font-bold text-blue-900 mt-1">
+        {testimonial.college}
+      </h3>
+
+      <p className="text-sm text-gray-500 mt-1">
+        {testimonial.name}
+      </p>
+
+    </div>
+  );
+}
+
+export default function TestimonialsSectionV2() {
+  const [current, setCurrent] = useState(0);
+
+  const next = () => {
+    setCurrent((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prev = () => {
+    setCurrent((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1
+    );
+  };
 
   useEffect(() => {
-    build();
-    startTimer();
-    window.addEventListener("resize", build);
-    return () => {
-      stopTimer();
-      window.removeEventListener("resize", build);
-    };
-  }, [build, startTimer, stopTimer]);
+    const timer = setInterval(next, 5000);
+
+    return () => clearInterval(timer);
+  }, [current]);
+    const visibleCards = 2;
+
+  const visibleTestimonials = [
+    testimonials[current],
+    testimonials[(current + 1) % testimonials.length],
+  ];
 
   return (
-    <section className="py-8 md:py-16 bg-white">
+    <section className="py-12 md:py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
 
-        <div className="grid grid-cols-1 md:grid-cols-[30%_1fr] gap-8 items-center">
+        {/* Heading */}
 
-          {/* Left — Fixed */}
+        <div className="grid grid-cols-1 md:grid-cols-[38%_62%] gap-10 items-start">
+
           <div>
+
             <p className="text-orange-500 font-semibold uppercase tracking-widest text-sm">
               Testimonials
             </p>
@@ -171,25 +140,75 @@ export default function TestimonialsSection() {
 
             <a
               href="/results"
-              className="inline-block mt-6 bg-orange-500 hover:bg-orange-600 transition text-white px-6 py-3 rounded-xl font-semibold text-sm"
+              className="inline-block mt-6 bg-orange-500 hover:bg-orange-600 transition text-white px-6 py-3 rounded-xl font-semibold"
             >
               View All Results →
             </a>
+
           </div>
 
-          {/* Right — Scrolling Cards */}
-          <div
-            ref={containerRef}
-            className="overflow-hidden relative h-[210px]"
-          >
-            <div
-              ref={trackRef}
-              className="flex absolute top-0 left-0"
-              style={{ gap: `${GAP}px` }}
-              onMouseEnter={stopTimer}
-              onMouseLeave={startTimer}
-            />
+          {/* Desktop */}
+
+          <div className="hidden md:grid grid-cols-2 gap-6">
+
+            {visibleTestimonials.map((student) => (
+
+              <TestimonialCard
+                key={student.name}
+                testimonial={student}
+              />
+
+            ))}
+
           </div>
+
+          {/* Mobile */}
+
+          <div className="md:hidden">
+
+            <TestimonialCard
+              testimonial={testimonials[current]}
+            />
+
+          </div>
+
+        </div>
+
+        {/* Controls */}
+
+        <div className="flex justify-center items-center gap-6 mt-10">
+
+          <button
+            onClick={prev}
+            className="w-11 h-11 rounded-full bg-white border shadow hover:bg-orange-500 hover:text-white transition"
+          >
+            <FaChevronLeft className="mx-auto" />
+          </button>
+
+          <div className="flex gap-2">
+
+            {testimonials.map((_, index) => (
+
+              <button
+                key={index}
+                onClick={() => setCurrent(index)}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  index === current
+                    ? "bg-orange-500 scale-125"
+                    : "bg-gray-300"
+                }`}
+              />
+
+            ))}
+
+          </div>
+
+          <button
+            onClick={next}
+            className="w-11 h-11 rounded-full bg-white border shadow hover:bg-orange-500 hover:text-white transition"
+          >
+            <FaChevronRight className="mx-auto" />
+          </button>
 
         </div>
 

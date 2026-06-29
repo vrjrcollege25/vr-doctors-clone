@@ -39,7 +39,7 @@ export default function Navbar() {
         >
           <div className="relative">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="VR Doctors Logo"
               width={50}
               height={50}
@@ -51,7 +51,7 @@ export default function Navbar() {
               VR Doctors
             </h1>
             <p className="text-xs text-orange-500 font-semibold">
-              NEET Academy
+              An exclusive NEET academy
             </p>
           </div>
         </motion.a>
