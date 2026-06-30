@@ -21,7 +21,7 @@ export default function WhoWeAre() {
             />
 
             <Image
-              src="/about/set 2.webp"
+              src="/about/Set 2.webp"
               alt="Students"
               width={400}
               height={400}
@@ -30,7 +30,7 @@ export default function WhoWeAre() {
             />
 
             <Image
-              src="/about/set 3.webp"
+              src="/about/Set 3.webp"
               alt="Faculty"
               width={400}
               height={400}
@@ -39,7 +39,7 @@ export default function WhoWeAre() {
             />
 
             <Image
-              src="/about/Neet 2025.webp"
+              src="/about/Set 4.webp"
               alt="Academic Environment"
               width={400}
               height={400}
