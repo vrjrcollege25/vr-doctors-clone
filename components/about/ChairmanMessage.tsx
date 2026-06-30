@@ -13,8 +13,8 @@ export default function ChairmanMessage() {
           <div className="w-full">
 
             <Image
-              src="/Campus/infra-2.webp"
-              alt="VR Doctors Leadership"
+              src="/Chairman.webp"
+              alt="Founder's Note"
               width={500}
               height={500}
               sizes="(min-width: 768px) 50vw, 80vw"
@@ -28,33 +28,30 @@ export default function ChairmanMessage() {
           <div>
 
             <p className="text-orange-500 font-semibold uppercase tracking-wide md:tracking-widest text-sm md:text-base">
-              Our Commitment
+              Founder's Note
             </p>
 
             <h2 className="mt-3 md:mt-4 text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 leading-tight">
-              Excellence In Every Endeavor
+              విద్యా దదాతి వినయం వినయాద్ యాతి పాత్రతామ్
             </h2>
 
             <p className="mt-4 md:mt-6 text-sm md:text-base text-gray-600 leading-relaxed">
-              Success is not achieved overnight. It is built through
-              discipline, consistency and the willingness to improve
-              every day.
+              ఈ రోజు పోటీ ప్రపంచంలో, విద్యను వ్యాపారంగా మార్చేసారు, ప్రతి విద్యార్థికి నాణ్యమైన విద్య అని నమ్మిన నేను, 
+              అందరికీ ప్రశాంతమైన వాతావరణంలో, ఉత్తమమైన విద్య, ఆరోగ్యమైన ఆహారం,
+              ఉన్నతమైన ప్రమాణాలు కలిగిన ఉపాధ్యాయులతో శిక్షణ అందిస్తూ ప్రతి విద్యార్థిని వ్యక్తి నుంచి వ్యవస్థను తీర్చిదిద్దే పౌరుడిగా మార్చాలని సదుద్దేశంతో VR స్థాపించాను.
             </p>
 
             <p className="mt-4 md:mt-6 text-sm md:text-base text-gray-600 leading-relaxed">
-              At VR Doctors Academy, our mission is to create an
-              environment where students can focus on their goals,
-              develop confidence and unlock their full potential.
-              We remain committed to guiding every aspiring doctor
-              with sincerity, dedication and academic excellence.
+             మా VRకి రండి, మా అధ్యాపకులతో మాట్లాడండి, మా విద్యార్థులని కలవండి, మీ పిల్లల బంగారు భవిష్యత్తుపై నిర్ణయం మీరే తీసుకోండి. 
+             VR మిమ్మల్ని ఆహ్వానించడానికి సిద్ధంగా ఉంది. మీ పిల్లల బంగారు భవిష్యత్తు ఈ రోజు సరైన నిర్ణయంతో ప్రారంభమవుతుంది.
             </p>
 
             <p className="mt-6 md:mt-8 font-bold text-blue-900 text-sm md:text-base">
-              The VR Doctors Team
+              Founder/Chairman
             </p>
 
             <p className="text-orange-500 text-sm md:text-base">
-              Dedicated to Your Success
+              Jawan Ramesh
             </p>
 
           </div>

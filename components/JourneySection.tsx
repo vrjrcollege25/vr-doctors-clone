@@ -3,9 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { target: 5, suffix: "+", label: "Years of excellence" },
-  { target: 5, suffix: "", label: "Successful batches" },
-  { target: 500, suffix: "+", label: "Doctors produced" },
+  { target: 6, suffix: "+", label: "Years of excellence" },
+  { target: 6, suffix: "", label: "Successful batches" },
+  { target: 600, suffix: "+", label: "Doctors produced" },
   { target: 101, suffix: "+", label: "Medical seats in 2025" },
 ];
 

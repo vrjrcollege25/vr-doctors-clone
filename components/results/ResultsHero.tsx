@@ -34,7 +34,7 @@ export default function ResultsHero({
         </p>
 
         <h1 className="mt-3 md:mt-5 text-3xl md:text-6xl font-bold text-white">
-          500+ Medical Careers
+          600+ Medical Careers
           <br />
           Guided Since 2019
         </h1>

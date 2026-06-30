@@ -12,7 +12,7 @@ export default function WhoWeAre() {
           <div className="grid grid-cols-2 gap-3 md:gap-4">
 
             <Image
-              src="/Campus/academics-1.webp"
+              src="/about/Set 1.webp"
               alt="VR Doctors Campus"
               width={400}
               height={400}
@@ -21,30 +21,30 @@ export default function WhoWeAre() {
             />
 
             <Image
-              src="/Campus/academics-2.webp"
+              src="/about/set 2.webp"
               alt="Students"
               width={400}
               height={400}
               sizes="(min-width: 768px) 25vw, 45vw"
-              className="w-full aspect-square object-cover rounded-2xl md:mt-8"
+              className="w-full aspect-square object-contain rounded-2xl md:mt-8"
             />
 
             <Image
-              src="/Campus/infra-1.webp"
+              src="/about/set 3.webp"
               alt="Faculty"
               width={400}
               height={400}
               sizes="(min-width: 768px) 25vw, 45vw"
-              className="w-full aspect-square object-cover rounded-2xl md:mt-8"
+              className="w-full h-auto aspect-square object-contain rounded-2xl md:mt-8"
             />
 
             <Image
-              src="/Campus/events-1.webp"
+              src="/about/Neet 2025.webp"
               alt="Academic Environment"
               width={400}
               height={400}
               sizes="(min-width: 768px) 25vw, 45vw"
-              className="w-full aspect-square object-cover rounded-2xl"
+              className="w-full h-auto aspect-square object-contain rounded-2xl"
             />
 
           </div>

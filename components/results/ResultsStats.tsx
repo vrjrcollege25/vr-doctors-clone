@@ -7,7 +7,7 @@ const stats = [
   },
   {
     number: "50%",
-    label: "Success Rate",
+    label: "Success Rate Every Year",
     icon: "⭐",
     context: "Students achieving seats"
   },

@@ -1,16 +1,16 @@
 const impacts = [
   {
-    stat: "500+",
+    stat: "600+",
     title: "Medical Careers Guided",
     story: "Each number represents a student who achieved their dream. Families changed, futures transformed, and the healthcare field strengthened with every success."
   },
   {
-    stat: "1000+",
-    title: "Students Every Year",
+    stat: "150+",
+    title: "Doctors Produced Every Year",
     story: "From first day to final NEET attempt, we walk alongside every student. Our residential environment creates a community of support and disciplined preparation."
   },
   {
-    stat: "5+",
+    stat: "6+",
     title: "Years of Excellence",
     story: "Since 2019, we've built more than just results. We've created a legacy of trust, consistency, and excellence that parents and students rely on."
   },
