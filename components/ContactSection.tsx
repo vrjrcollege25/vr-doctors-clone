@@ -46,7 +46,10 @@ export default function ContactSection() {
                 </h3>
 
                 <p className="mt-1 text-gray-600 text-sm leading-relaxed">
-                  +91 9256 9256 40/41/42/43
+                  +91 9256 9256 40 <br />
+                  +91 9256 9256 41 <br />
+                  +91 9256 9256 42 <br />
+                  +91 9256 9256 43
                 </p>
               </div>
 

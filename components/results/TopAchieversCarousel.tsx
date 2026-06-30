@@ -37,7 +37,7 @@ const achievers = [
     name: "K Sai Devi Sree",
     marks: "551 Marks",
     college: "Governamanet Medical College",
-    image: "/results/aSSET 10.png",
+    image: "/results/Asset 10.png",
   },
   {
     name: "D Sai Kumar",
