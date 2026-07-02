@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import HeroCarousel from "../components/HeroCarousel";
 import JourneySection from "../components/JourneySection";
@@ -9,6 +10,11 @@ import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
 import DreamersSection from "@/components/DreamersSection";
 
+export const metadata: Metadata = {
+  title: "Best Residential NEET Coaching in Hyderabad",
+  description:
+    "VR Doctors Academy is a premier residential NEET coaching institute in Hyderabad helping students achieve success through expert faculty, disciplined learning and proven medical admissions.",
+};
 
 export default function Home() {
   return (

@@ -5,7 +5,7 @@ interface CoursesHeroProps {
 }
 
 export default function CoursesHero({
-  backgroundImage = "/Campus/academics-3.webp"
+  backgroundImage = "/course hero.webp"
 }: CoursesHeroProps) {
   return (
     <section className="relative py-12 md:py-20 overflow-hidden">
@@ -17,7 +17,7 @@ export default function CoursesHero({
           alt="Programs and Courses"
           fill
           priority
-          className="object-cover -z-10"
+          className="object-contain -z-10"
         />
       )}
 

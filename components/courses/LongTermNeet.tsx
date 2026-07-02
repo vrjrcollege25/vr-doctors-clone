@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function LongTermNeet() {
   return (
-    <section className="py-12 md:py-16 bg-blue-50">
+    <section id="Longterm" className="py-12 md:py-16 bg-blue-50 scroll-mt-24">
 
       <div className="max-w-6xl mx-auto px-4 md:px-6">
 

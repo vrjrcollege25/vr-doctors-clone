@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ShortTermRevision() {
   return (
-    <section className="py-12 md:py-16 bg-white">
+    <section id="shortterm" className="py-12 md:py-16 bg-white scroll-mt-24">
 
       <div className="max-w-6xl mx-auto px-4 md:px-6">
 

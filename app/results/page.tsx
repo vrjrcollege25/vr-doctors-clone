@@ -6,7 +6,13 @@ import TopAchieversCarousel from "@/components/results/TopAchieversCarousel";
 import SuccessStories from "@/components/results/SuccessStories";
 import Footer from "../../components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "NEET Results & Medical Admissions",
+  description:
+    "Discover the success stories, top achievers and medical college admissions of students from VR Doctors Academy since 2019.",
+};
 
 export default function Home() {
   return (
