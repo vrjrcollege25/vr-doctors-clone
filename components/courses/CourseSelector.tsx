@@ -1,3 +1,29 @@
+import { GraduationCap, BookOpen, Zap } from "lucide-react";
+
+const programs = [
+  {
+    icon: GraduationCap,
+    title: "Intermediate + NEET",
+    description:
+      "Begin your Intermediate education while preparing systematically for NEET.",
+    tag: "For Class 10 Passed Students",
+  },
+  {
+    icon: BookOpen,
+    title: "Long-Term NEET",
+    description:
+      "Comprehensive residential program focused on achieving medical seat admission.",
+    tag: "For Serious Medical Aspirants",
+  },
+  {
+    icon: Zap,
+    title: "Revision Program",
+    description:
+      "Intensive preparation focused on revision, testing and exam readiness.",
+    tag: "For Final Year Preparation",
+  },
+];
+
 export default function CourseSelector() {
   return (
     <section className="py-12 md:py-16 bg-blue-50">
@@ -22,59 +48,36 @@ export default function CourseSelector() {
 
         <div className="grid md:grid-cols-3 gap-5 md:gap-6">
 
-          <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 hover:shadow-lg transition">
+          {programs.map((program) => {
+            const Icon = program.icon;
+            return (
+              <div
+                key={program.title}
+                className="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 hover:shadow-lg transition group"
+              >
 
-            <div className="text-4xl md:text-5xl">🎓</div>
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-orange-100 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Icon
+                    className="w-7 h-7 md:w-8 md:h-8 text-orange-600"
+                    strokeWidth={2}
+                  />
+                </div>
 
-            <h3 className="mt-4 md:mt-5 text-lg md:text-2xl font-bold text-blue-900">
-              Intermediate + NEET
-            </h3>
+                <h3 className="mt-4 md:mt-5 text-lg md:text-2xl font-bold text-blue-900">
+                  {program.title}
+                </h3>
 
-            <p className="mt-3 md:mt-4 text-sm md:text-base text-gray-600">
-              Begin your Intermediate education while preparing systematically for NEET.
-            </p>
+                <p className="mt-3 md:mt-4 text-sm md:text-base text-gray-600">
+                  {program.description}
+                </p>
 
-            <p className="mt-4 md:mt-6 font-semibold text-orange-500 text-sm md:text-base">
-              For Class 10 Passed Students
-            </p>
+                <p className="mt-4 md:mt-6 font-semibold text-orange-500 text-sm md:text-base">
+                  {program.tag}
+                </p>
 
-          </div>
-
-          <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 hover:shadow-lg transition">
-
-            <div className="text-4xl md:text-5xl">📚</div>
-
-            <h3 className="mt-4 md:mt-5 text-lg md:text-2xl font-bold text-blue-900">
-              Long-Term NEET
-            </h3>
-
-            <p className="mt-3 md:mt-4 text-sm md:text-base text-gray-600">
-              Comprehensive residential program focused on achieving medical seat admission.
-            </p>
-
-            <p className="mt-4 md:mt-6 font-semibold text-orange-500 text-sm md:text-base">
-              For Serious Medical Aspirants
-            </p>
-
-          </div>
-
-          <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-200 hover:shadow-lg transition">
-
-            <div className="text-4xl md:text-5xl">⚡</div>
-
-            <h3 className="mt-4 md:mt-5 text-lg md:text-2xl font-bold text-blue-900">
-              Revision Program
-            </h3>
-
-            <p className="mt-3 md:mt-4 text-sm md:text-base text-gray-600">
-              Intensive preparation focused on revision, testing and exam readiness.
-            </p>
-
-            <p className="mt-4 md:mt-6 font-semibold text-orange-500 text-sm md:text-base">
-              For Final Year Preparation
-            </p>
-
-          </div>
+              </div>
+            );
+          })}
 
         </div>
 
