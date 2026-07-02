@@ -4,11 +4,11 @@ import { useState } from "react";
 import Image from "next/image";
 
 const collegeImages = [
-  "/medical admissions/Universities-01.webp",
+  "/medical admissions/Universities-07.webp",
   "/medical admissions/Universities-02.webp",
   "/medical admissions/Universities-03.webp",
   "/medical admissions/Universities-04.webp",
-  "/medical admissions/Universities-05.webp",
+  "/medical admissions/Universities-01.webp",
   "/medical admissions/Universities-06.webp",
 ];
 
