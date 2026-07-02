@@ -5,7 +5,7 @@ interface ContactHeroProps {
 }
 
 export default function ContactHero({
-  backgroundImage = "/Campus/infra-2.webp"
+  backgroundImage = "/contact hero.webp"
 }: ContactHeroProps) {
   return (
     <section className="relative py-12 md:py-20 overflow-hidden">
@@ -17,15 +17,15 @@ export default function ContactHero({
           alt="Contact VR Doctors"
           fill
           priority
-          className="object-cover -z-10"
+          className="object-contain -z-10"
         />
       )}
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60 -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/80 -z-10" />
 
       {/* Subtle Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-950/40 via-transparent to-blue-900/40 -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/80 -z-10" />
 
       <div className="max-w-6xl mx-auto px-4 md:px-6 text-center relative z-9">
 
